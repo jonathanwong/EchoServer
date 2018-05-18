@@ -32,7 +32,7 @@ class EchoServer {
         }
         do {
             let channel = try serverBootstrap.bind(host: host, port: port).wait()
-            print("connected to client on \(String(describing: channel.localAddress))")
+            print("Listening on \(String(describing: channel.localAddress))...")
             try channel.closeFuture.wait()
         } catch let error {
             throw error
